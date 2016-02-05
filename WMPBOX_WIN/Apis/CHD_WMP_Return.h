@@ -1,0 +1,31 @@
+
+#ifndef _CHD_WMP_RETURN_H_
+#define _CHD_WMP_RETURN_H_
+
+#include "CHD_WMP_Type.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define SUCCESSFUL			(0x0000)
+typedef enum{		
+	CHD_RET_SUCCESS 		= SUCCESSFUL,				
+	CHD_RET_FAILED			= (SUCCESSFUL - 1),			
+	CHD_RET_TIMEOUT			= (SUCCESSFUL - 2),	
+	CHD_RET_CONNECT_ERROR	= (SUCCESSFUL - 3),
+	CHD_RET_SEND_ERROR		= (SUCCESSFUL - 4),
+	CHD_RET_RECV_ERROR		= (SUCCESSFUL - 5),
+	CHD_RET_DISCONNECT		= (SUCCESSFUL - 6),
+	CHD_RET_HANDLE_ERROR	= (SUCCESSFUL - 7),			
+	CHD_RET_SESSIONID_ERROR	= (SUCCESSFUL - 8),	
+	CHD_RET_PROTOCOL_ERROR	= (SUCCESSFUL - 9),	
+	CHD_RET_NET_BIND_ERROR	= (SUCCESSFUL - 10),	
+}CHD_RET_E;
+
+
+#ifdef __cplusplus
+}
+#endif
+#endif
+
